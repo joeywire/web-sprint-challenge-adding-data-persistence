@@ -12,5 +12,14 @@ router.post('/', async (req, res) => {
   }
 }); 
 
+router.get('/', async (req, res) => {
+  try { 
+    const pileOshit = await Task.getAll(); 
+    res.status(200).json(pileOshit); 
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+})
+
 
 module.exports = router;
