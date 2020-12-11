@@ -8,4 +8,4 @@ module.exports = {
   create(proj) {
     return db('projects').insert(proj); 
   }
-}
+}; 
